@@ -34,9 +34,10 @@ namespace QLDSV_HTC.Forms
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtMaLTC = new DevExpress.XtraEditors.SpinEdit();
+            this.hUYLOPCheckBox = new System.Windows.Forms.CheckBox();
             this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.DS = new QLDSV_HTC.DS();
+            this.txtMaLTC = new DevExpress.XtraEditors.SpinEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.barButtonAdd = new DevExpress.XtraBars.BarButtonItem();
@@ -69,6 +70,7 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.tableAdapterManager = new QLDSV_HTC.DSTableAdapters.TableAdapterManager();
             this.LOPTINCHITableAdapter = new QLDSV_HTC.DSTableAdapters.LOPTINCHITableAdapter();
             this.gcLOPTINCHI = new DevExpress.XtraGrid.GridControl();
@@ -89,17 +91,15 @@ namespace QLDSV_HTC.Forms
             this.cmbKhoa = new System.Windows.Forms.ComboBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.hUYLOPCheckBox = new System.Windows.Forms.CheckBox();
-            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).BeginInit();
@@ -119,6 +119,7 @@ namespace QLDSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcLOPTINCHI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKY)).BeginInit();
@@ -126,7 +127,6 @@ namespace QLDSV_HTC.Forms
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -168,6 +168,26 @@ namespace QLDSV_HTC.Forms
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
+            // hUYLOPCheckBox
+            // 
+            this.hUYLOPCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTINCHI, "HUYLOP", true));
+            this.hUYLOPCheckBox.Location = new System.Drawing.Point(313, 84);
+            this.hUYLOPCheckBox.Name = "hUYLOPCheckBox";
+            this.hUYLOPCheckBox.Size = new System.Drawing.Size(76, 20);
+            this.hUYLOPCheckBox.TabIndex = 14;
+            this.hUYLOPCheckBox.Text = "Hủy lớp";
+            this.hUYLOPCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // bdsLOPTINCHI
+            // 
+            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
+            this.bdsLOPTINCHI.DataSource = this.DS;
+            // 
+            // DS
+            // 
+            this.DS.DataSetName = "DS";
+            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtMaLTC
             // 
             this.txtMaLTC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsLOPTINCHI, "MALTC", true));
@@ -186,16 +206,6 @@ namespace QLDSV_HTC.Forms
             this.txtMaLTC.Size = new System.Drawing.Size(180, 20);
             this.txtMaLTC.StyleController = this.layoutControl1;
             this.txtMaLTC.TabIndex = 13;
-            // 
-            // bdsLOPTINCHI
-            // 
-            this.bdsLOPTINCHI.DataMember = "LOPTINCHI";
-            this.bdsLOPTINCHI.DataSource = this.DS;
-            // 
-            // DS
-            // 
-            this.DS.DataSetName = "DS";
-            this.DS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // barManager1
             // 
@@ -597,6 +607,16 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem10.Text = "Mã lớp tín chỉ";
             this.layoutControlItem10.TextSize = new System.Drawing.Size(73, 13);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.hUYLOPCheckBox;
+            this.layoutControlItem9.Location = new System.Drawing.Point(301, 72);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(80, 25);
+            this.layoutControlItem9.Text = "HUYLOP:";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem9.TextVisible = false;
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -781,26 +801,6 @@ namespace QLDSV_HTC.Forms
             this.panelControl3.Size = new System.Drawing.Size(1144, 804);
             this.panelControl3.TabIndex = 17;
             // 
-            // hUYLOPCheckBox
-            // 
-            this.hUYLOPCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.bdsLOPTINCHI, "HUYLOP", true));
-            this.hUYLOPCheckBox.Location = new System.Drawing.Point(313, 84);
-            this.hUYLOPCheckBox.Name = "hUYLOPCheckBox";
-            this.hUYLOPCheckBox.Size = new System.Drawing.Size(76, 20);
-            this.hUYLOPCheckBox.TabIndex = 14;
-            this.hUYLOPCheckBox.Text = "Hủy lớp";
-            this.hUYLOPCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // layoutControlItem9
-            // 
-            this.layoutControlItem9.Control = this.hUYLOPCheckBox;
-            this.layoutControlItem9.Location = new System.Drawing.Point(301, 72);
-            this.layoutControlItem9.Name = "layoutControlItem9";
-            this.layoutControlItem9.Size = new System.Drawing.Size(80, 25);
-            this.layoutControlItem9.Text = "HUYLOP:";
-            this.layoutControlItem9.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem9.TextVisible = false;
-            // 
             // MoLopTinChiForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -823,9 +823,9 @@ namespace QLDSV_HTC.Forms
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaLTC.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoSVTT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaKhoa.Properties)).EndInit();
@@ -845,6 +845,7 @@ namespace QLDSV_HTC.Forms
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcLOPTINCHI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsDANGKY)).EndInit();
@@ -853,7 +854,6 @@ namespace QLDSV_HTC.Forms
             this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

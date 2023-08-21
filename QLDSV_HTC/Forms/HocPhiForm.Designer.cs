@@ -99,24 +99,24 @@ namespace QLDSV_HTC.Forms
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colNGAYDONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOTIENDONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.sp_GetThongTinDongHocPhiTableAdapter = new QLDSV_HTC.DSTableAdapters.sp_GetThongTinDongHocPhiTableAdapter();
-            this.sp_GetChiTietDongHocPhiTableAdapter = new QLDSV_HTC.DSTableAdapters.sp_GetChiTietDongHocPhiTableAdapter();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.simpleBtnRenew = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleBtnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleBtnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleBtnDelete = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleBtnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.simpleBtnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.simpleBtnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleBtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleBtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleBtnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleBtnRenew = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.sp_GetThongTinDongHocPhiTableAdapter = new QLDSV_HTC.DSTableAdapters.sp_GetThongTinDongHocPhiTableAdapter();
+            this.sp_GetChiTietDongHocPhiTableAdapter = new QLDSV_HTC.DSTableAdapters.sp_GetChiTietDongHocPhiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -956,14 +956,6 @@ namespace QLDSV_HTC.Forms
             this.colSOTIENDONG.Visible = true;
             this.colSOTIENDONG.VisibleIndex = 1;
             // 
-            // sp_GetThongTinDongHocPhiTableAdapter
-            // 
-            this.sp_GetThongTinDongHocPhiTableAdapter.ClearBeforeFill = true;
-            // 
-            // sp_GetChiTietDongHocPhiTableAdapter
-            // 
-            this.sp_GetChiTietDongHocPhiTableAdapter.ClearBeforeFill = true;
-            // 
             // groupControl5
             // 
             this.groupControl5.Controls.Add(this.layoutControl4);
@@ -991,6 +983,68 @@ namespace QLDSV_HTC.Forms
             this.layoutControl4.TabIndex = 0;
             this.layoutControl4.Text = "layoutControl4";
             // 
+            // simpleBtnRenew
+            // 
+            this.simpleBtnRenew.Location = new System.Drawing.Point(100, 64);
+            this.simpleBtnRenew.Name = "simpleBtnRenew";
+            this.simpleBtnRenew.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnRenew.StyleController = this.layoutControl4;
+            this.simpleBtnRenew.TabIndex = 9;
+            this.simpleBtnRenew.Text = "Làm mới";
+            this.simpleBtnRenew.Click += new System.EventHandler(this.simpleBtnRenew_Click);
+            // 
+            // simpleBtnHuy
+            // 
+            this.simpleBtnHuy.Enabled = false;
+            this.simpleBtnHuy.Location = new System.Drawing.Point(12, 64);
+            this.simpleBtnHuy.Name = "simpleBtnHuy";
+            this.simpleBtnHuy.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnHuy.StyleController = this.layoutControl4;
+            this.simpleBtnHuy.TabIndex = 8;
+            this.simpleBtnHuy.Text = "Hủy";
+            this.simpleBtnHuy.Click += new System.EventHandler(this.simpleBtnHuy_Click);
+            // 
+            // simpleBtnSave
+            // 
+            this.simpleBtnSave.Enabled = false;
+            this.simpleBtnSave.Location = new System.Drawing.Point(100, 38);
+            this.simpleBtnSave.Name = "simpleBtnSave";
+            this.simpleBtnSave.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnSave.StyleController = this.layoutControl4;
+            this.simpleBtnSave.TabIndex = 7;
+            this.simpleBtnSave.Text = "Ghi";
+            this.simpleBtnSave.Click += new System.EventHandler(this.simpleBtnSave_Click);
+            // 
+            // simpleBtnDelete
+            // 
+            this.simpleBtnDelete.Location = new System.Drawing.Point(12, 38);
+            this.simpleBtnDelete.Name = "simpleBtnDelete";
+            this.simpleBtnDelete.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnDelete.StyleController = this.layoutControl4;
+            this.simpleBtnDelete.TabIndex = 6;
+            this.simpleBtnDelete.Text = "Xóa";
+            this.simpleBtnDelete.Click += new System.EventHandler(this.simpleBtnDelete_Click);
+            // 
+            // simpleBtnEdit
+            // 
+            this.simpleBtnEdit.Location = new System.Drawing.Point(100, 12);
+            this.simpleBtnEdit.Name = "simpleBtnEdit";
+            this.simpleBtnEdit.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnEdit.StyleController = this.layoutControl4;
+            this.simpleBtnEdit.TabIndex = 5;
+            this.simpleBtnEdit.Text = "Sửa";
+            this.simpleBtnEdit.Click += new System.EventHandler(this.simpleBtnEdit_Click);
+            // 
+            // simpleBtnThem
+            // 
+            this.simpleBtnThem.Location = new System.Drawing.Point(12, 12);
+            this.simpleBtnThem.Name = "simpleBtnThem";
+            this.simpleBtnThem.Size = new System.Drawing.Size(84, 22);
+            this.simpleBtnThem.StyleController = this.layoutControl4;
+            this.simpleBtnThem.TabIndex = 4;
+            this.simpleBtnThem.Text = "Thêm";
+            this.simpleBtnThem.Click += new System.EventHandler(this.simpleBtnThem_Click);
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -1006,16 +1060,6 @@ namespace QLDSV_HTC.Forms
             this.layoutControlGroup3.Name = "layoutControlGroup3";
             this.layoutControlGroup3.Size = new System.Drawing.Size(196, 136);
             this.layoutControlGroup3.TextVisible = false;
-            // 
-            // simpleBtnThem
-            // 
-            this.simpleBtnThem.Location = new System.Drawing.Point(12, 12);
-            this.simpleBtnThem.Name = "simpleBtnThem";
-            this.simpleBtnThem.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnThem.StyleController = this.layoutControl4;
-            this.simpleBtnThem.TabIndex = 4;
-            this.simpleBtnThem.Text = "Thêm";
-            this.simpleBtnThem.Click += new System.EventHandler(this.simpleBtnThem_Click);
             // 
             // layoutControlItem11
             // 
@@ -1034,16 +1078,6 @@ namespace QLDSV_HTC.Forms
             this.emptySpaceItem2.Size = new System.Drawing.Size(88, 38);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // simpleBtnEdit
-            // 
-            this.simpleBtnEdit.Location = new System.Drawing.Point(100, 12);
-            this.simpleBtnEdit.Name = "simpleBtnEdit";
-            this.simpleBtnEdit.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnEdit.StyleController = this.layoutControl4;
-            this.simpleBtnEdit.TabIndex = 5;
-            this.simpleBtnEdit.Text = "Sửa";
-            this.simpleBtnEdit.Click += new System.EventHandler(this.simpleBtnEdit_Click);
-            // 
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.simpleBtnEdit;
@@ -1052,16 +1086,6 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem12.Size = new System.Drawing.Size(88, 26);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem12.TextVisible = false;
-            // 
-            // simpleBtnDelete
-            // 
-            this.simpleBtnDelete.Location = new System.Drawing.Point(12, 38);
-            this.simpleBtnDelete.Name = "simpleBtnDelete";
-            this.simpleBtnDelete.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnDelete.StyleController = this.layoutControl4;
-            this.simpleBtnDelete.TabIndex = 6;
-            this.simpleBtnDelete.Text = "Xóa";
-            this.simpleBtnDelete.Click += new System.EventHandler(this.simpleBtnDelete_Click);
             // 
             // layoutControlItem13
             // 
@@ -1072,17 +1096,6 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem13.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem13.TextVisible = false;
             // 
-            // simpleBtnSave
-            // 
-            this.simpleBtnSave.Enabled = false;
-            this.simpleBtnSave.Location = new System.Drawing.Point(100, 38);
-            this.simpleBtnSave.Name = "simpleBtnSave";
-            this.simpleBtnSave.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnSave.StyleController = this.layoutControl4;
-            this.simpleBtnSave.TabIndex = 7;
-            this.simpleBtnSave.Text = "Ghi";
-            this.simpleBtnSave.Click += new System.EventHandler(this.simpleBtnSave_Click);
-            // 
             // layoutControlItem14
             // 
             this.layoutControlItem14.Control = this.simpleBtnSave;
@@ -1091,17 +1104,6 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem14.Size = new System.Drawing.Size(88, 26);
             this.layoutControlItem14.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem14.TextVisible = false;
-            // 
-            // simpleBtnHuy
-            // 
-            this.simpleBtnHuy.Enabled = false;
-            this.simpleBtnHuy.Location = new System.Drawing.Point(12, 64);
-            this.simpleBtnHuy.Name = "simpleBtnHuy";
-            this.simpleBtnHuy.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnHuy.StyleController = this.layoutControl4;
-            this.simpleBtnHuy.TabIndex = 8;
-            this.simpleBtnHuy.Text = "Hủy";
-            this.simpleBtnHuy.Click += new System.EventHandler(this.simpleBtnHuy_Click);
             // 
             // layoutControlItem15
             // 
@@ -1112,16 +1114,6 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
-            // simpleBtnRenew
-            // 
-            this.simpleBtnRenew.Location = new System.Drawing.Point(100, 64);
-            this.simpleBtnRenew.Name = "simpleBtnRenew";
-            this.simpleBtnRenew.Size = new System.Drawing.Size(84, 22);
-            this.simpleBtnRenew.StyleController = this.layoutControl4;
-            this.simpleBtnRenew.TabIndex = 9;
-            this.simpleBtnRenew.Text = "Làm mới";
-            this.simpleBtnRenew.Click += new System.EventHandler(this.simpleBtnRenew_Click);
-            // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.simpleBtnRenew;
@@ -1130,6 +1122,14 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem16.Size = new System.Drawing.Size(88, 26);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
+            // 
+            // sp_GetThongTinDongHocPhiTableAdapter
+            // 
+            this.sp_GetThongTinDongHocPhiTableAdapter.ClearBeforeFill = true;
+            // 
+            // sp_GetChiTietDongHocPhiTableAdapter
+            // 
+            this.sp_GetChiTietDongHocPhiTableAdapter.ClearBeforeFill = true;
             // 
             // HocPhiForm
             // 

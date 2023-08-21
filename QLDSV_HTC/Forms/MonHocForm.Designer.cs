@@ -34,7 +34,7 @@ namespace QLDSV_HTC.Forms
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtSoTietLT = new DevExpress.XtraEditors.SpinEdit();
+            this.txtSoTietTH = new DevExpress.XtraEditors.SpinEdit();
             this.bdsMONHOC = new System.Windows.Forms.BindingSource(this.components);
             this.DS = new QLDSV_HTC.DS();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
@@ -51,12 +51,14 @@ namespace QLDSV_HTC.Forms
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.txtSoTietLT = new DevExpress.XtraEditors.SpinEdit();
             this.txtTenMonHoc = new DevExpress.XtraEditors.TextEdit();
             this.txtMaMonHoc = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.MONHOCTableAdapter = new QLDSV_HTC.DSTableAdapters.MONHOCTableAdapter();
             this.tableAdapterManager = new QLDSV_HTC.DSTableAdapters.TableAdapterManager();
             this.gcMONHOC = new DevExpress.XtraGrid.GridControl();
@@ -67,29 +69,27 @@ namespace QLDSV_HTC.Forms
             this.colSOTIET_TH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bdsLOPTINCHI = new System.Windows.Forms.BindingSource(this.components);
             this.LOPTINCHITableAdapter = new QLDSV_HTC.DSTableAdapters.LOPTINCHITableAdapter();
-            this.txtSoTietTH = new DevExpress.XtraEditors.SpinEdit();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietTH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMONHOC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietTH.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -126,22 +126,22 @@ namespace QLDSV_HTC.Forms
             this.layoutControl2.TabIndex = 0;
             this.layoutControl2.Text = "layoutControl2";
             // 
-            // txtSoTietLT
+            // txtSoTietTH
             // 
-            this.txtSoTietLT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_LT", true));
-            this.txtSoTietLT.EditValue = new decimal(new int[] {
+            this.txtSoTietTH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_TH", true));
+            this.txtSoTietTH.EditValue = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.txtSoTietLT.Location = new System.Drawing.Point(102, 60);
-            this.txtSoTietLT.MenuManager = this.barManager1;
-            this.txtSoTietLT.Name = "txtSoTietLT";
-            this.txtSoTietLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtSoTietTH.Location = new System.Drawing.Point(102, 84);
+            this.txtSoTietTH.MenuManager = this.barManager1;
+            this.txtSoTietTH.Name = "txtSoTietTH";
+            this.txtSoTietTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSoTietLT.Size = new System.Drawing.Size(396, 20);
-            this.txtSoTietLT.StyleController = this.layoutControl2;
-            this.txtSoTietLT.TabIndex = 7;
+            this.txtSoTietTH.Size = new System.Drawing.Size(396, 20);
+            this.txtSoTietTH.StyleController = this.layoutControl2;
+            this.txtSoTietTH.TabIndex = 8;
             // 
             // bdsMONHOC
             // 
@@ -300,6 +300,23 @@ namespace QLDSV_HTC.Forms
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 1044);
             // 
+            // txtSoTietLT
+            // 
+            this.txtSoTietLT.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_LT", true));
+            this.txtSoTietLT.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtSoTietLT.Location = new System.Drawing.Point(102, 60);
+            this.txtSoTietLT.MenuManager = this.barManager1;
+            this.txtSoTietLT.Name = "txtSoTietLT";
+            this.txtSoTietLT.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSoTietLT.Size = new System.Drawing.Size(396, 20);
+            this.txtSoTietLT.StyleController = this.layoutControl2;
+            this.txtSoTietLT.TabIndex = 7;
+            // 
             // txtTenMonHoc
             // 
             this.txtTenMonHoc.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "TENMH", true));
@@ -363,6 +380,15 @@ namespace QLDSV_HTC.Forms
             this.layoutControlItem4.Size = new System.Drawing.Size(490, 24);
             this.layoutControlItem4.Text = "Số tiết lý thuyết:";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(87, 13);
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.txtSoTietTH;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(490, 64);
+            this.layoutControlItem5.Text = "Số tiết thực hành:";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(87, 13);
             // 
             // MONHOCTableAdapter
             // 
@@ -459,32 +485,6 @@ namespace QLDSV_HTC.Forms
             // 
             this.LOPTINCHITableAdapter.ClearBeforeFill = true;
             // 
-            // txtSoTietTH
-            // 
-            this.txtSoTietTH.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsMONHOC, "SOTIET_TH", true));
-            this.txtSoTietTH.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtSoTietTH.Location = new System.Drawing.Point(102, 84);
-            this.txtSoTietTH.MenuManager = this.barManager1;
-            this.txtSoTietTH.Name = "txtSoTietTH";
-            this.txtSoTietTH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSoTietTH.Size = new System.Drawing.Size(396, 20);
-            this.txtSoTietTH.StyleController = this.layoutControl2;
-            this.txtSoTietTH.TabIndex = 8;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.txtSoTietTH;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 72);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(490, 64);
-            this.layoutControlItem5.Text = "Số tiết thực hành:";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(87, 13);
-            // 
             // MonHocForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,21 +506,21 @@ namespace QLDSV_HTC.Forms
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietTH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMONHOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietLT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaMonHoc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcMONHOC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOPTINCHI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSoTietTH.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

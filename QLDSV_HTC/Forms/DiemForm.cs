@@ -110,15 +110,15 @@ namespace QLDSV_HTC.Forms
         private void DiemForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DS.MONHOC' table. You can move, or remove it, as needed.
-            this.MONHOCTableAdapter.Fill(this.DS.MONHOC);
-            if (Program.AuthGroup == "PGV")
-            {
-                Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
-            }
-            else if (Program.AuthGroup == "KHOA")
-            {
-                Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
-            }
+            //this.MONHOCTableAdapter.Fill(this.DS.MONHOC);
+            //if (Program.AuthGroup == "PGV")
+            //{
+            //    Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
+            //}
+            //else if (Program.AuthGroup == "KHOA")
+            //{
+            //    Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
+            //}
 
             Utils.LoadComboBox(cmbKhoa, Program.Bds_Dspm.DataSource);
             Utils.ChangeServer(cmbKhoa);

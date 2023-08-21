@@ -54,6 +54,10 @@ namespace QLDSV_HTC.Forms
                     = barButtonSave.Enabled
                     = panelControl4.Enabled
                     = value;
+
+
+
+
             }
         }
 
@@ -108,14 +112,25 @@ namespace QLDSV_HTC.Forms
 
         private void LopForm_Load(object sender, EventArgs e)
         {
-            if (Program.AuthGroup == "PGV")
-            {
-                Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
-            }
-            else if (Program.AuthGroup == "KHOA")
-            {
-                Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
-            }
+            //if (Program.AuthGroup == "PGV")
+            //{
+            //    Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
+            //}
+            //else if (Program.AuthGroup == "KHOA")
+            //{
+            //    Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
+            //}
+
+
+            //if (Program.AuthGroup == "PGV")
+            //{
+            //    Program.Bds_Dspm.Filter = ("TENPM = 'HOC PHÍ'");
+            //}
+            //else if (Program.AuthGroup == "KHOA")
+            //{
+            //    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
+            //}
+
 
             Utils.LoadComboBox(cmbKhoa, Program.Bds_Dspm.DataSource);
 
@@ -131,6 +146,8 @@ namespace QLDSV_HTC.Forms
             state = "add";
             SetButtonState(true);
             txtMaLop.Focus();
+            MessageBox.Show("sdfsd", Program.MaKhoa);
+
             if (txtMaKhoa.DataBindings.Count > 0)
             {
                 this.DS.LOP.MAKHOAColumn.DefaultValue = Program.MaKhoa;
@@ -150,21 +167,21 @@ namespace QLDSV_HTC.Forms
         {
             position = 0;
             LoadData();
-            XtraMessageBox.Show("Làm mới dữ liệu thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             XtraMessageBox.Show("Làm mới dữ liệu thành công", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void barButtonCancel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (this.panelControl1.Enabled)
-            {
-                string message = "Lớp học đang thêm chưa lưu vào Database. \n Bạn có chắc muốn thoát !";
-                if (state == "edit") message = "Lớp học đang hiệu chỉnh chưa lưu vào Database. \n Bạn có chắc muốn thoát !";
-                DialogResult dr = XtraMessageBox.Show(message, "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dr == DialogResult.No)
-                {
-                    return;
-                }
-            }
+            //if (this.panelControl1.Enabled)
+            //{
+            //    string message = "Lớp học đang thêm chưa lưu vào Database. \n Bạn có chắc muốn thoát !";
+            //    if (state == "edit") message = "Lớp học đang hiệu chỉnh chưa lưu vào Database. \n Bạn có chắc muốn thoát !";
+            //    DialogResult dr = XtraMessageBox.Show(message, "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            //    if (dr == DialogResult.No)
+            //    {
+            //        return;
+            //    }
+            //}
             this.Close();
         }
 

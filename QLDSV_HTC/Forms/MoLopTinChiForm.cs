@@ -293,14 +293,14 @@ namespace QLDSV_HTC.Forms
         private void MoLopTinChiForm_Load(object sender, EventArgs e)
         {
 
-            if (Program.AuthGroup == "PGV")
-            {
-                Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
-            }
-            else if (Program.AuthGroup == "KHOA")
-            {
-                Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
-            }
+            //if (Program.AuthGroup == "PGV")
+            //{
+            //    Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
+            //}
+            //else if (Program.AuthGroup == "KHOA")
+            //{
+            //    Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
+            //}
 
             Utils.LoadComboBox(cmbKhoa, Program.Bds_Dspm.DataSource);
 
@@ -317,6 +317,7 @@ namespace QLDSV_HTC.Forms
             {
                 LoadData();
             }
+
         }
 
         private void barButtonHuy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

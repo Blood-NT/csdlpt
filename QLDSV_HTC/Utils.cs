@@ -45,8 +45,17 @@ namespace QLDSV_HTC
 
         public static string GetMaKhoa(string tenkhoa)
         {
+            //MessageBox.Show("sdfsd", tenkhoa);
             string ShortName = "";
-            Array.ForEach(tenkhoa.Split(' '), s => ShortName += s[0]);
+
+            if (tenkhoa.Length > 9)
+            {
+                // Sử dụng phương thức Substring để cắt bỏ 9 ký tự đầu
+                ShortName=tenkhoa.Substring(9);
+            }
+            //MessageBox.Show("ShortName", ShortName);
+
+            //Array.ForEach(tenkhoa.Split(' '), s => ShortName += s[0]);
             return ShortName;
         }
 

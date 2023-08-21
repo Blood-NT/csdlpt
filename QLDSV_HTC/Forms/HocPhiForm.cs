@@ -454,8 +454,9 @@ namespace QLDSV_HTC.Forms
                 }
             catch (Exception ex)
             {
-                
-                
+                Console.WriteLine(ex);
+
+
             }
             SetButtonStatePanel2(false);
             simpleButton1_Click(null, null);

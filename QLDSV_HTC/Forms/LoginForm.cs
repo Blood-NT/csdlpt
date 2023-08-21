@@ -82,7 +82,6 @@ namespace QLDSV_HTC.Forms
                 {
                     MessageBox.Show("Sinh viên đã nghỉ học!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Program.MyReader.Close();
-
                     return;
                 }
                if (Program.MyReader.GetString(4)!= Program.AuthLogin)
@@ -131,6 +130,16 @@ namespace QLDSV_HTC.Forms
                     Console.WriteLine("Lỗi lấy thông tin login: " + ex.ToString());
                     XtraMessageBox.Show("Tài khoản không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
+                }
+                Program.Bds_Dspm.RemoveFilter();
+
+                if (Program.AuthGroup == "PGV")
+                {
+                    Program.Bds_Dspm.Filter = ("TENPM = 'HOC PHÍ'");
+                }
+                else if (Program.AuthGroup == "KHOA")
+                {
+                    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
                 }
 
                 Program.MyReader.Close();
@@ -184,6 +193,7 @@ namespace QLDSV_HTC.Forms
             // cất dt vào biến toàn cục Bds_Dspm
             Program.Bds_Dspm.DataSource = dt;
             Utils.LoadComboBox(cmbServer, dt);
+
         }
     }
 }

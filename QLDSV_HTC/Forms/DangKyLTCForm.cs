@@ -58,13 +58,6 @@ namespace QLDSV_HTC.Forms
 
             if (Program.MyReader == null) return;
 
-            //string ho = (string)Program.MyReader["HO"];
-            //txtHoTen.Text = "nguyen anh hao";
-            //string ten = (string)Program.MyReader["TEN"];
-            //string maLop = (string)Program.MyReader["MALOP"];
-            //xtMaLop.Text = "D19QCCN02N";
-
-            //dien vao textEditor
             if (Program.MyReader.Read())
             {
                 txtHoTen.Text = (string)Program.MyReader["hoten"];
@@ -140,7 +133,6 @@ namespace QLDSV_HTC.Forms
                     DisabledRowHandles.Add(i);
                 }
                 i++;
-
             }
             sp_LayDSLopTinChiDaDangKyBindingSource.Filter = "MAMH <> ''";
             bind.DataSource = table;
