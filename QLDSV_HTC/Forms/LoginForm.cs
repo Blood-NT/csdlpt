@@ -133,13 +133,23 @@ namespace QLDSV_HTC.Forms
                 }
                 Program.Bds_Dspm.RemoveFilter();
 
+                //if (Program.AuthGroup == "PGV")
+                //{
+                //    Program.Bds_Dspm.Filter = ("TENPM = 'HOC PHÍ'");
+                //}
+                //else if (Program.AuthGroup == "KHOA")
+                //{
+                //    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
+                //}
+
+
                 if (Program.AuthGroup == "PGV")
                 {
-                    Program.Bds_Dspm.Filter = ("TENPM = 'HOC PHÍ'");
+                    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
                 }
                 else if (Program.AuthGroup == "KHOA")
                 {
-                    Program.Bds_Dspm.Filter = ("TENPM <> 'HOC PHÍ'");
+                    Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
                 }
 
                 Program.MyReader.Close();
