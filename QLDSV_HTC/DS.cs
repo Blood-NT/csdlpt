@@ -4,6 +4,10 @@
 
     partial class DS
     {
+        partial class sp_Get_Info_LoginDataTable
+        {
+        }
+
         partial class SINHVIENDataTable
         {
         }

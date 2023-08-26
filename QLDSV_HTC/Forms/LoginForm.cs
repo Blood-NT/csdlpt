@@ -152,6 +152,7 @@ namespace QLDSV_HTC.Forms
                     Program.Bds_Dspm.Filter = string.Format("TENSERVER = '{0}'", Program.ServerName);
                 }
 
+
                 Program.MyReader.Close();
                 Program.Conn.Close();
             }

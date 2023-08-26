@@ -67,7 +67,6 @@ namespace QLDSV_HTC
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
@@ -96,8 +95,7 @@ namespace QLDSV_HTC
             this.barButtonItem13,
             this.barButtonItem14,
             this.barButtonItem15,
-            this.barButtonItem16,
-            this.barButtonItem3});
+            this.barButtonItem16});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 21;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -319,7 +317,6 @@ namespace QLDSV_HTC
             // dangKyPageGroup
             // 
             this.dangKyPageGroup.ItemLinks.Add(this.barButtonItem16);
-            this.dangKyPageGroup.ItemLinks.Add(this.barButtonItem3);
             this.dangKyPageGroup.Name = "dangKyPageGroup";
             this.dangKyPageGroup.Text = "Đăng ký";
             // 
@@ -400,13 +397,6 @@ namespace QLDSV_HTC
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "đăng ký ";
-            this.barButtonItem3.Id = 20;
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick_1);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,7 +460,6 @@ namespace QLDSV_HTC
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup dangKyPageGroup;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }
 }
 

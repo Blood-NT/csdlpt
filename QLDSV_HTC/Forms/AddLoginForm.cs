@@ -89,6 +89,14 @@ namespace QLDSV_HTC.Forms
             {
                 target.RemoveAll(p => p.TENSERVER == "PKT");
             }
+
+            else if (Program.AuthGroup == "PKT")
+            {
+                Program.Bds_Dspm.Filter = ("TENPM = 'HOC PHÍ'");
+                target.RemoveAll(p => p.TENSERVER == "PGV");
+                target.RemoveAll(p => p.TENSERVER == "KHOA");
+            }
+
             else
             {
                 target.RemoveAll(p => p.TENSERVER != Program.AuthGroup);
@@ -99,8 +107,12 @@ namespace QLDSV_HTC.Forms
 
 
             Utils.LoadComboBox(roleList, target);
-            Program.Bds_Dspm.Filter = "TENKHOA <> 'Phòng Kế Toán'";
             Utils.LoadComboBox(cmbKhoa, Program.Bds_Dspm.DataSource);
+        }
+
+        private void cmbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

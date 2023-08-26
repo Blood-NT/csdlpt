@@ -144,6 +144,7 @@ namespace QLDSV_HTC.Forms
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(273, 21);
             this.cmbKhoa.TabIndex = 4;
+            this.cmbKhoa.SelectedIndexChanged += new System.EventHandler(this.cmbKhoa_SelectedIndexChanged);
             // 
             // Root
             // 
